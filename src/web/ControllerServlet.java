@@ -29,7 +29,6 @@ public class ControllerServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Requête send en GET");
 		request.getRequestDispatcher("jeu.jsp").forward(request, response);
-	
 	}
 
 	/**
@@ -47,7 +46,6 @@ public class ControllerServlet extends HttpServlet {
 			model = (ModelJeu) (session.getAttribute("model"));
 		}
 		
-		System.out.println("Requête send en POST");
 		int nb = Integer.parseInt(request.getParameter("nombre"));
 		model.setNombre(nb);
 		String rep = metier.jouer(nb);

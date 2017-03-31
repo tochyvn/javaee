@@ -16,11 +16,11 @@ public class MetierJeu {
 	public String jouer(int nb) {
 		if (fin == false) {
 			if (nb > nombreSecret) {
-				return "Votre nombre est plus grand";
+				return "Votre nombre : " + nb + " est plus grand";
 			}else if(nb < nombreSecret) {
-				return "Votre nombre est plus petit";
+				return "Votre nombre : " + nb + " est plus petit";
 			}else {
-				return "Bravo vous avez gagné";
+				return "Bravo vous avez gagné. Le nombre secret est bien : " + nb;
 			}
 		}else {
 			return "Le jeu est terminé, le nombre recherché est " + nombreSecret;
